@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AnimalTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-04-28T20:28:47" hostname="Abdirahmans-MBP.lan" time="0.002">
+<testsuite name="AnimalTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-04-28T20:32:34" hostname="Abdirahmans-MBP.lan" time="0.003">
   <properties/>
-  <testcase name="person_instantiatesCorrectly_true" classname="AnimalTest" time="0.002"/>
-  <testcase name="getName_personInstantiatesWithName_Lion" classname="AnimalTest" time="0.0"/>
+  <testcase name="getName_animalInstantiatesWithName_Lion" classname="AnimalTest" time="0.002"/>
+  <testcase name="person_instantiatesCorrectly_true" classname="AnimalTest" time="0.0"/>
+  <testcase name="getEndangered_animalInstantiatesWithEndangered_No" classname="AnimalTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
