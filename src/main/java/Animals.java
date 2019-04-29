@@ -1,9 +1,9 @@
-public class Animal {
+public class Animals {
     public String name;
 
 
 
-    public Animal(String name){
+    public Animals(String name){
         this.name = name;
 
 
@@ -18,11 +18,11 @@ public class Animal {
 
     @Override
     public boolean equals(Object otherAnimal) {
-        if (!(otherAnimal instanceof Animal)) {
+        if (!(otherAnimal instanceof Animals)) {
             return false;
         } else {
-            Animal newAnimal = (Animal) otherAnimal;
-            return this.getName().equals(newAnimal.getName());
+            Animals newAnimals = (Animals) otherAnimal;
+            return this.getName().equals(newAnimals.getName());
 
         }
     }
