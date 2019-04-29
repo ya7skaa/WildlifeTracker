@@ -9,13 +9,20 @@ public class SightingTest {
 
     @Test
     public void sightingInstantiates_true(){
-        Sighting testSighting = new Sighting("Yasmin");
+        Sighting testSighting = new Sighting("Yasmin","Karura Forest");
         assertEquals(true, testSighting instanceof Sighting );
     }
     @Test
     public void getRangerInstantiatesCorrectly_String(){
-        Sighting testSighting = new Sighting("Yasmin");
+        Sighting testSighting = new Sighting("Yasmin","Karura Forest");
         assertEquals("Yasmin", testSighting.getRanger());
     }
+    @Test
+    public void getLocationInstantiatesCorrectly_String(){
+        Sighting testSighting = new Sighting("Yasmin","Karura Forest");
+        assertEquals("By the river", testSighting.getLocation());
+    }
+
+
 
 }
