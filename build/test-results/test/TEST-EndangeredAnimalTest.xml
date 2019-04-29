@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EndangeredAnimalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-04-29T07:13:17" hostname="Abdirahmans-MBP.lan" time="0.001">
+<testsuite name="EndangeredAnimalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-04-29T07:16:40" hostname="Abdirahmans-MBP.lan" time="0.001">
   <properties/>
-  <testcase name="endangeredAnimal_instantiatesCorrectly_true" classname="EndangeredAnimalTest" time="0.001"/>
+  <testcase name="getName_endangeredAnimalInstantiatesWithName_Lion" classname="EndangeredAnimalTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
