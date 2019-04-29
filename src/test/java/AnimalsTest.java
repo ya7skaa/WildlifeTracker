@@ -21,11 +21,33 @@ public class AnimalsTest {
         assertEquals("Lion", testAnimals.getName());
     }
 
+
     @Test
-    public void save_insertsObjectIntoDatabase_Animal() {
+    public void all_returnsAllInstancesOfAnimals_true() {
+        Animals firstAnimals = new Animals("Lion");
+
+        firstAnimals.save();
+        Animals secondAnimals = new Animals("Rhino");
+        secondAnimals.save();
+        assertEquals(true, Animals.all().get(0).equals(firstAnimals));
+        assertEquals(true, Animals.all().get(1).equals(secondAnimals));
+    }
+
+    @Test
+    public void save_assignsIdToObject() {
         Animals testAnimals = new Animals("Lion");
         testAnimals.save();
-        assertEquals(Animals.all().get(0).equals(testAnimals));
+        Animals savedAnimals = Animals.all().get(0);
+        assertEquals(testAnimals.getId(), savedAnimals.getId());
+    }
+
+    @Test
+    public void find_returnsPersonWithSameId_secondPerson() {
+        Animals firstAnimals = new Animals("Lion");
+        firstAnimals.save();
+        Animals secondAnimals = new Animals("Rhino");
+        secondAnimals.save();
+        assertEquals(Animals.find(secondAnimals.getId()), secondAnimals);
     }
 
 

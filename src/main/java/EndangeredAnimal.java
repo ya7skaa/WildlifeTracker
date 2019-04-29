@@ -3,6 +3,7 @@ public class  EndangeredAnimal extends Animals {
    private  String age;
 
 
+
     public static final String HEALTH = "healthy";
     public static final String ILL = "ill";
     public static final String OKAY = "okay";
