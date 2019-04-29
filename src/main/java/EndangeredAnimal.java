@@ -2,9 +2,11 @@ import java.util.List;
 import org.sql2o.Connection;
 
 public class  EndangeredAnimal extends Animals {
-   private String  health;
-   private  String age;
+    private String health;
+    private String age;
+    public String type;
 
+    public static final String DATABASE_TYPE = "endangered";
 
 
     public static final String HEALTH = "healthy";
@@ -15,12 +17,11 @@ public class  EndangeredAnimal extends Animals {
     public static final String ADULT = "adult";
 
 
-
-
     public EndangeredAnimal(String name, String health, String age) {
         super(name);
         this.health = health;
         this.age = age;
+        type = DATABASE_TYPE;
     }
 
     public String getHealth() {
@@ -39,5 +40,10 @@ public class  EndangeredAnimal extends Animals {
                     .executeAndFetch(EndangeredAnimal.class);
         }
 
+    }
+
+
+
 
     }
+
