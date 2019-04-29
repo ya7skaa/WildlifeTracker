@@ -70,6 +70,16 @@ public class SightingTest {
         assertEquals(Sighting.find(firstSighting.getId()), firstSighting);
     }
 
+    @Test
+    public void save_savesAnimalsIdIntoDB_true() {
+        Animals myAnimal = new Animals("Lion");
+        myAnimal.save();
+        Sighting mySighting = new Sighting("Yasmin", "Karura Forest", myAnimal.getId());
+        mySighting.save();
+        Sighting savedSighting = Sighting.find(mySighting.getId());
+        assertEquals(savedSighting.getAnimalId(), myAnimal.getId());
+    }
+
 
 
 
