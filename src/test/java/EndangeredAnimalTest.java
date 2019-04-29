@@ -1,8 +1,14 @@
+import org.junit.Rule;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
 
 public class EndangeredAnimalTest {
+
+    @Rule
+    public DatabaseRule database = new DatabaseRule();
+
     @Test
     public void endangeredAnimal_instantiatesCorrectly_true(){
         EndangeredAnimal testAnimal = new EndangeredAnimal ("Lion","Healthy","old");
@@ -41,10 +47,20 @@ public class EndangeredAnimalTest {
 
     @Test
     public void save_assignsIdToObject() {
-        EndangeredAnimal testAnimal = new EndangeredAnimal ("Cheetahs","Healthy","Young");
+        EndangeredAnimal testAnimal = new EndangeredAnimal ("Lion","Healthy","old");
         testAnimal.save();
         EndangeredAnimal savedAnimal = EndangeredAnimal.all().get(0);
         assertEquals(testAnimal.getId(), savedAnimal.getId());
+    }
+
+
+    @Test
+    public void find_returnsAnimalsWithSameId_secondAnimal() {
+        EndangeredAnimal firstAnimal = new EndangeredAnimal("Lion","Healthy","old");
+        firstAnimal.save();
+        EndangeredAnimal secondAnimal = new EndangeredAnimal ("Lion","Healthy","old");
+        secondAnimal.save();
+        assertEquals(EndangeredAnimal.find(secondAnimal.getId()), secondAnimal);
     }
 
 
