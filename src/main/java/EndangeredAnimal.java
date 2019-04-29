@@ -1,13 +1,30 @@
-public class EndangeredAnimal {
-    public String name;
-
-    public EndangeredAnimal(String name){
-        this.name = name;
+public class  EndangeredAnimal extends Animal {
+   private String  health;
+   private  String age;
 
 
+    public static final String HEALTH = "healthy";
+    public static final String ILL = "ill";
+    public static final String OKAY = "okay";
+    public static final String NEWBORN = "newborn";
+    public static final String YOUNG = "young";
+    public static final String ADULT = "adult";
 
+
+
+
+    public EndangeredAnimal(String name, String endangered, String health, String age) {
+        super(name, endangered);
+        this.health = health;
+        this.age = age;
     }
-    public String getName(){
-        return name;
+
+    public String getHealth() {
+        return health;
     }
+
+    public String getAge() {
+        return age;
+    }
+
 }

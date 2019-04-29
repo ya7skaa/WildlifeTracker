@@ -4,16 +4,22 @@ import static org.junit.Assert.assertEquals;
 
 public class EndangeredAnimalTest {
     @Test
-    public void endangeredAnimal_instantiatesCorrectly_true() {
-        EndangeredAnimal testEndangeredAnimal= new EndangeredAnimal("Lion");
-        assertEquals(true, testEndangeredAnimal instanceof EndangeredAnimal);
+    public void animal_instantiatesCorrectly_true(){
+        EndangeredAnimal testAnimal = new EndangeredAnimal ("Lion","No","Healthy","old");
+        assertEquals(true, testAnimal instanceof EndangeredAnimal);
+    }
 
+
+    @Test
+    public void endangeredAnimal_getHealthInstantiatesCorrectly_String(){
+        EndangeredAnimal testAnimal = new EndangeredAnimal("Lion","No","Healthy","old");
+        assertEquals("Healthy", testAnimal.getHealth());
     }
 
     @Test
-    public void getName_endangeredAnimalInstantiatesWithName_Lion() {
-        EndangeredAnimal testEndangeredAnimal = new EndangeredAnimal("Lion");
-        assertEquals("Lion",testEndangeredAnimal.getName());
+    public void endangeredAnimal_getAgeInstantiatesCorrectly_String(){
+        EndangeredAnimal testAnimal = new EndangeredAnimal("Lion","No","healthy","old");
+        assertEquals("Young", testAnimal.getAge());
     }
 
 
