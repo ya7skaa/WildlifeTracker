@@ -49,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Animals.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
+            <state relative-caret-position="892">
               <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -71,27 +71,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Sighting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            <state relative-caret-position="257">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#199#200#0" expanded="true" />
                 <element signature="e#228#229#0" expanded="true" />
                 <element signature="e#346#347#0" expanded="true" />
                 <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#495#496#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#547#548#0" expanded="true" />
+                <element signature="e#567#568#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SightingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="510">
+              <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -186,8 +190,8 @@
         <option value="$PROJECT_DIR$/src/test/java/AnimalsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB.java" />
         <option value="$PROJECT_DIR$/src/test/java/EndangeredAnimalTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Sighting.java" />
         <option value="$PROJECT_DIR$/src/test/java/SightingTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Sighting.java" />
       </list>
     </option>
   </component>
@@ -396,24 +400,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AnimalsTest - 2019.04.29 at 18h 46m 29s.xml">
-      <configuration name="AnimalsTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="AnimalsTest - 2019.04.29 at 18h 47m 07s.xml">
-      <configuration name="AnimalsTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="AnimalsTest - 2019.04.29 at 18h 48m 44s.xml">
-      <configuration name="AnimalsTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="AnimalsTest - 2019.04.29 at 18h 50m 36s.xml">
-      <configuration name="AnimalsTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="EndangeredAnimalTest - 2019.04.29 at 18h 50m 44s.xml">
-      <configuration name="EndangeredAnimalTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="EndangeredAnimalTest - 2019.04.29 at 18h 55m 46s.xml">
-      <configuration name="EndangeredAnimalTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="EndangeredAnimalTest - 2019.04.29 at 19h 01m 22s.xml">
       <configuration name="EndangeredAnimalTest" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -426,10 +412,27 @@
     <history-entry file="SightingTest - 2019.04.29 at 19h 25m 22s.xml">
       <configuration name="SightingTest" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="SightingTest - 2019.04.29 at 19h 34m 49s.xml">
+      <configuration name="SightingTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SightingTest - 2019.04.29 at 19h 35m 27s.xml">
+      <configuration name="SightingTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SightingTest - 2019.04.29 at 19h 37m 38s.xml">
+      <configuration name="SightingTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SightingTest - 2019.04.29 at 19h 38m 39s.xml">
+      <configuration name="SightingTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SightingTest - 2019.04.29 at 19h 39m 47s.xml">
+      <configuration name="SightingTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="SightingTest - 2019.04.29 at 19h 39m 48s.xml">
+      <configuration name="SightingTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="42" width="1420" height="774" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2525399" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -539,20 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Animals.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/EndangeredAnimalTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -573,26 +562,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Sighting.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Animals.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="892">
+          <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SightingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="510">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Sighting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
           </folding>
         </state>
       </provider>
