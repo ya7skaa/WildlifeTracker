@@ -1,5 +1,4 @@
 import org.junit.Test;
-import org.sql2o.*;
 
 import static org.junit.Assert.assertEquals;
 

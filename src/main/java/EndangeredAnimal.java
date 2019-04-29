@@ -1,4 +1,4 @@
-public class  EndangeredAnimal extends Animal {
+public class  EndangeredAnimal extends Animals {
    private String  health;
    private  String age;
 
