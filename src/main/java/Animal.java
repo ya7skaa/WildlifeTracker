@@ -1,11 +1,11 @@
 public class Animal {
     public String name;
-    public String endangered;
 
 
-    public Animal(String name,String endangered){
+
+    public Animal(String name){
         this.name = name;
-        this.endangered = endangered;
+
 
 
     }
@@ -14,9 +14,7 @@ public class Animal {
         return name;
     }
 
-    public String getEndangered(){
-        return endangered;
-    }
+
 
     @Override
     public boolean equals(Object otherAnimal) {
@@ -24,8 +22,8 @@ public class Animal {
             return false;
         } else {
             Animal newAnimal = (Animal) otherAnimal;
-            return this.getName().equals(newAnimal.getName()) &&
-                    this.getEndangered().equals(newAnimal.getEndangered());
+            return this.getName().equals(newAnimal.getName());
+
         }
     }
 
