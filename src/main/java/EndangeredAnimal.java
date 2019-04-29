@@ -1,3 +1,6 @@
+import java.util.List;
+import org.sql2o.Connection;
+
 public class  EndangeredAnimal extends Animals {
    private String  health;
    private  String age;
@@ -28,4 +31,13 @@ public class  EndangeredAnimal extends Animals {
         return age;
     }
 
-}
+    public static List<EndangeredAnimal> all() {
+        String sql = "SELECT * FROM animals WHERE type='endangered';";
+        try (Connection con = DB.sql2o.open()) {
+            return con.createQuery(sql)
+                    .throwOnMappingFailure(false)
+                    .executeAndFetch(EndangeredAnimal.class);
+        }
+
+
+    }
