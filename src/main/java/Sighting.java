@@ -28,6 +28,13 @@ public class Sighting {
         return animalId;
     }
 
+    public static List<Sighting> all() {
+        String sql = "SELECT id, ranger, location, animalId FROM sightings";
+        try(Connection con = DB.sql2o.open()) {
+            return con.createQuery(sql).executeAndFetch(Sighting.class);
+        }
+    }
+
     @Override
     public boolean equals(Object otherSighting) {
         if (!(otherSighting instanceof Sighting)) {
@@ -40,5 +47,18 @@ public class Sighting {
                     this.getAnimalId() == newSighting.getAnimalId();
         }
     }
+
+    public void save() {
+        try(Connection con = DB.sql2o.open()) {
+            String sql = "INSERT INTO sightings (ranger, location, animalId ) VALUES (:ranger, :location, :animalId)";
+            this.id = (int) con.createQuery(sql, true)
+                    .addParameter("ranger", this.ranger)
+                    .addParameter("location", this.location)
+                    .addParameter("animalId", this.animalId)
+                    .executeUpdate()
+                    .getKey();
+        }
+    }
+
 
 }

@@ -6,6 +6,8 @@ import static org.junit.Assert.assertTrue;
 
 
 public class SightingTest {
+    @Rule
+    public DatabaseRule database = new DatabaseRule();
 
     @Test
     public void sightingInstantiates_true(){
@@ -25,7 +27,7 @@ public class SightingTest {
     @Test
     public void equals_returnsTrueIfRangerAreTheSame_true() {
         Sighting firstSighting = new Sighting("Yasmin","Karura Forest",1);
-        Sighting secondSighting = new Sighting("Jack","Park",1);
+        Sighting secondSighting = new Sighting("Yasmin","Karura Forest",1);
         assertTrue(firstSighting.equals(secondSighting));
     }
     @Test
@@ -34,6 +36,31 @@ public class SightingTest {
         mySighting.save();
         assertTrue(Sighting.all().get(0).equals(mySighting));
     }
+    @Test
+    public void all_returnsAllInstancesOfSighting_true() {
+        Sighting firstSighting = new Sighting("Yasmin","Karura Forest",1);
+        firstSighting.save();
+        Sighting secondSighting = new Sighting("Yasmin","Karura Forest",1);
+        secondSighting.save();
+        assertEquals(true, Sighting.all().get(0).equals(firstSighting));
+        assertEquals(true, Sighting.all().get(1).equals(secondSighting));
+    }
+
+    @Test
+    public void save_assignsIdToObject() {
+        Sighting mySighting = new Sighting("Yasmin","Karura Forest",1);
+        mySighting.save();
+        Sighting savedSighting = Sighting.all().get(0);
+        assertEquals(mySighting.getId(), savedSighting.getId());
+    }
+    @Test
+    public void getId_sightingsInstantiateWithAnId_1() {
+        Sighting testSighting = new Sighting("Yasmin","Karura Forest",1);
+        testSighting.save();
+        assertTrue(testSighting.getId() > 0);
+    }
+
+
 
 
 

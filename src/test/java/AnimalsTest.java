@@ -1,7 +1,9 @@
 import org.junit.Rule;
 import org.junit.Test;
+import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 
 public class AnimalsTest {
@@ -49,6 +51,18 @@ public class AnimalsTest {
         Animals secondAnimals = new Animals("Rhino");
         secondAnimals.save();
         assertEquals(Animals.find(secondAnimals.getId()), secondAnimals);
+    }
+
+    @Test
+    public void getSightings_retrievesALlSightingsFromDatabase_sightingsList() {
+        Animals myAnimal = new Animals("Lion");
+        myAnimal.save();
+        Sighting firstSighting = new Sighting("John","By the river", myAnimal.getId());
+        firstSighting.save();
+        Sighting secondSighting = new Sighting("Peter","By the pond", myAnimal.getId());
+        secondSighting.save();
+        Sighting[] sightings = new Sighting[] { firstSighting, secondSighting };
+        assertTrue(myAnimal.getSightings().containsAll(Arrays.asList(sightings)));
     }
 
 

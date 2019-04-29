@@ -44,14 +44,14 @@ public class Animals {
         }
     }
 
-    //    public List<Sightings> getSightings() {
-//        try(Connection con = DB.sql2o.open()) {
-//            String sql = "SELECT * FROM sightings where animalId=:id";
-//            return con.createQuery(sql)
-//                    .addParameter("id", this.id)
-//                    .executeAndFetch(Sightings.class);
-//        }
-//    }
+        public List<Sighting> getSightings() {
+        try(Connection con = DB.sql2o.open()) {
+            String sql = "SELECT * FROM sightings where animalId=:id";
+            return con.createQuery(sql)
+                    .addParameter("id", this.id)
+                    .executeAndFetch(Sighting.class);
+        }
+    }
     public static List<EndangeredAnimal> all() {
         String sql = "SELECT * FROM animals";
         try (Connection con = DB.sql2o.open()) {
