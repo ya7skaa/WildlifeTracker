@@ -1,0 +1,82 @@
+<div class="row">
+    <!-- Grid column -->
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <!-- Form register -->
+                <form action="/endangered_sighting" method="post">
+                    <h2 class="text-center font-up font-bold deep-orange-text py-4">Endangered Animal:</h2>
+
+                    <label>Select Endangered Animal</label>
+                    <select name="endangeredAnimalSelected">
+                        #foreach($endangered_animal in $endangeredAnimals)
+                        <option value="$endangered_animal.getId()">$endangered_animal.getName()</option>
+                        #end
+                    </select>
+                    <label>Health</label>
+                    &emsp;<select name="health">
+                    <option>Sick</option>
+                    <option>Okay</option>
+                    <option>Healthy</option>
+                </select>
+                    <label>Age</label>
+                    &emsp;<select name="age">
+                    <option>Newborn</option>
+                    <option>Young</option>
+                    <option>Adult</option>
+                </select>
+                    <div class="md-form">
+                        <i class="fa fa-user prefix grey-text"></i>
+                        <input type="text" id="orangeForm-name3" class="form-control">
+                        <label for="orangeForm-name3">Location</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fa fa-envelope prefix grey-text"></i>
+                        <input type="text" id="orangeForm-email3" class="form-control">
+                        <label for="orangeForm-email3">Your name</label>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-deep-orange">Submit Report<i class="fa fa-angle-double-right pl-2" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+                <!-- Form register -->
+            </div>
+        </div>
+    </div>
+    <!-- Grid column -->
+    <!-- Grid column -->
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <!-- Form register -->
+                <form>
+                    <h2 class="text-center font-up font-bold deep-orange-text py-4">Non-Endangered Animals:</h2>
+
+                    <label>Select Animal</label>
+                    &emsp;<select name="animalSelected">
+                    #foreach($animal in $animals)
+                    <option value="$animal.getId()">$animal.getName()</option>
+                    #end
+                </select>
+                    <div class="md-form">
+                        <i class="fa fa-user prefix grey-text"></i>
+                        <input type="text" id="orangeForm-name3" class="form-control">
+                        <label for="orangeForm-name3">Location</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fa fa-envelope prefix grey-text"></i>
+                        <input type="text" id="orangeForm-email3" class="form-control">
+                        <label for="orangeForm-email3">Your name</label>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-deep-orange">Submit Report<i class="fa fa-angle-double-right pl-2" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+                <!-- Form register -->
+            </div>
+        </div>
+    </div>
+    <!-- Grid column -->
+</div>
