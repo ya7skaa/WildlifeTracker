@@ -73,17 +73,39 @@ public class App {
 // route when clicking on "Add Animal to System"
         get("/animal/new", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            model.put("template", "templates/animal-form.vtl");
+            model.put("template", "templates/animal_form.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
-        // route when clicking on "Add Animal to System"
 
-        get("/animal/new", (request, response) -> {
+        // route for adding new animal form
+        post("/animal/new", (request, response) -> {
+            boolean endangered = request.queryParams("endangered")!=null;
+            if (endangered) {
+                String name = request.queryParams("name");
+                Animals animal = new Animals(name);
+                animal.save();
+            } else {
+                String name = request.queryParams("name");
+                Animals animal = new Animals(name);
+                animal.save();
+            }
+            response.redirect("/");
+            return null;
+        });
+
+
+        //route when user clicks "All Animals" or "View Animals"
+        get("/animals", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            model.put("template", "templates/animal-form.vtl");
+            model.put("animals", Animals.all());
+            model.put("endangeredAnimals", EndangeredAnimal.all());
+            model.put("sightings", Sighting.all());
+            model.put("template", "templates/animals.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
+
+
 
 
 //        post("/endangered_sighting", (request, response) -> {
