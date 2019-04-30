@@ -13,6 +13,7 @@ public class App {
         staticFileLocation("/public");
         String layout = "templates/layout.vtl";
 
+        port(5678);
 
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
@@ -83,7 +84,7 @@ public class App {
             boolean endangered = request.queryParams("endangered")!=null;
             if (endangered) {
                 String name = request.queryParams("name");
-                Animals animal = new Animals(name);
+                Animals animal = new EndangeredAnimal(name);
                 animal.save();
             } else {
                 String name = request.queryParams("name");
@@ -102,6 +103,25 @@ public class App {
             model.put("endangeredAnimals", EndangeredAnimal.all());
             model.put("sightings", Sighting.all());
             model.put("template", "templates/animals.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
+        //route when you click on an endangeredAnimal
+        get("/endangered_animal/:id", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            EndangeredAnimal endangeredAnimal = EndangeredAnimal.find(Integer.parseInt(request.params("id")));
+            model.put("endangeredAnimal", endangeredAnimal);
+            model.put("template", "templates/endangered_animal.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
+
+        //route when you click on a non-endangered animal
+        get("/animal/:id", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            Animals animal = Animals.find(Integer.parseInt(request.params("id")));
+            model.put("animal", animal);
+            model.put("template", "templates/animal.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 

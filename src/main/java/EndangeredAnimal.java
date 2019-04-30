@@ -1,7 +1,7 @@
 import java.util.List;
 import org.sql2o.Connection;
 
-public class  EndangeredAnimal extends Animals {
+public class EndangeredAnimal extends Animals {
     private String health;
     private String age;
     public String type;
@@ -17,10 +17,8 @@ public class  EndangeredAnimal extends Animals {
     public static final String ADULT = "adult";
 
 
-    public EndangeredAnimal(String name, String health, String age) {
+    public EndangeredAnimal(String name) {
         super(name);
-        this.health = health;
-        this.age = age;
         type = DATABASE_TYPE;
     }
 

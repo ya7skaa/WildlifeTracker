@@ -40,7 +40,7 @@ public class SightingTest {
     public void all_returnsAllInstancesOfSighting_true() {
         Sighting firstSighting = new Sighting("Yasmin","Karura Forest",1);
         firstSighting.save();
-        Sighting secondSighting = new Sighting("Yasmin","Karura Forest",1);
+        Sighting secondSighting = new Sighting("Peter","By the pond",1);
         secondSighting.save();
         assertEquals(true, Sighting.all().get(0).equals(firstSighting));
         assertEquals(true, Sighting.all().get(1).equals(secondSighting));

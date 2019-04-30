@@ -12,7 +12,7 @@ public class Animals {
 
     public Animals(String name) {
         this.name = name;
-        this.id = id;
+        this.type = type = "non-endangered";
     }
 
     public String getName() {
