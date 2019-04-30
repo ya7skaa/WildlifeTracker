@@ -1,0 +1,32 @@
+.btn-warning {
+    background: none;
+    border: 3px solid #5bc0de;
+    color: #5bc0de;
+}
+.btn-warning:hover,
+.btn-warning:active {
+    color: #FFF;
+    background: #39b3d7;
+}
+
+.btn-warning {
+    background: none;
+    border: 3px solid #f0ad4e;
+    color: #f0ad4e;
+}
+.btn-warning:hover,
+.btn-warning:active {
+    color: #FFF;
+    background: #ed9c28;
+}
+
+.btn-warning {
+    background: none;
+    border: 3px solid #d9534f;
+    color: #d9534f;
+}
+.btn-warning:hover,
+.btn-warning:active {
+    color: #FFF;
+    background: #d2322d;
+}
