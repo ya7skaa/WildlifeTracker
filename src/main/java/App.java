@@ -77,6 +77,14 @@ public class App {
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        // route when clicking on "Add Animal to System"
+
+        get("/animal/new", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            model.put("template", "templates/animal-form.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
 
 //        post("/endangered_sighting", (request, response) -> {
 //            Map<String, Object> model = new HashMap<String, Object>();
