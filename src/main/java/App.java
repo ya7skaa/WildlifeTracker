@@ -40,8 +40,11 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             String location = request.queryParams("location");
             String ranger = request.queryParams("ranger");
+            String health = request.queryParams("health");
+            String age = request.queryParams("health");
+
             int animalId = Integer.parseInt(request.queryParams("endangeredAnimalSelected"));
-            Sighting sighting = new Sighting(ranger, location, animalId);
+            Sighting sighting = new Sighting(ranger, location, animalId,health,age);
             sighting.save();
             model.put("sighting", sighting);
             model.put("animals", EndangeredAnimal.all());
@@ -58,8 +61,11 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             String location = request.queryParams("location");
             String ranger = request.queryParams("ranger");
+            String health = request.queryParams("health");
+            String age = request.queryParams("health");
+
             int animalId = Integer.parseInt(request.queryParams("endangeredAnimalSelected"));
-            Sighting sighting = new Sighting(ranger, location, animalId);
+            Sighting sighting = new Sighting(ranger, location, animalId,health, age);
             sighting.save();
             model.put("sighting", sighting);
             model.put("animals", EndangeredAnimal.all());
@@ -84,7 +90,9 @@ public class App {
             boolean endangered = request.queryParams("endangered")!=null;
             if (endangered) {
                 String name = request.queryParams("name");
-                Animals animal = new EndangeredAnimal(name);
+                String health = request.queryParams("health");
+                String age = request.queryParams("health");
+                EndangeredAnimal animal = new EndangeredAnimal(name,health,age);
                 animal.save();
             } else {
                 String name = request.queryParams("name");
@@ -107,6 +115,7 @@ public class App {
         }, new VelocityTemplateEngine());
 
         //route when you click on an endangeredAnimal
+
         get("/endangered_animal/:id", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             EndangeredAnimal endangeredAnimal = EndangeredAnimal.find(Integer.parseInt(request.params("id")));
@@ -117,6 +126,7 @@ public class App {
 
 
         //route when you click on a non-endangered animal
+
         get("/animal/:id", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             Animals animal = Animals.find(Integer.parseInt(request.params("id")));

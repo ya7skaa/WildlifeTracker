@@ -12,7 +12,7 @@ public class Animals {
 
     public Animals(String name) {
         this.name = name;
-        this.type = type = "non-endangered";
+//        this.type = type = "endangered";
     }
 
     public String getName() {

@@ -4,7 +4,7 @@ import org.sql2o.Connection;
 public class EndangeredAnimal extends Animals {
     private String health;
     private String age;
-    public String type;
+//    public String type;
 
     public static final String DATABASE_TYPE = "endangered";
 
@@ -17,8 +17,10 @@ public class EndangeredAnimal extends Animals {
     public static final String ADULT = "adult";
 
 
-    public EndangeredAnimal(String name) {
+    public EndangeredAnimal(String name,String health, String age) {
         super(name);
+        this.health = health;
+        this.age = age;
         type = DATABASE_TYPE;
     }
 
@@ -30,7 +32,15 @@ public class EndangeredAnimal extends Animals {
         return age;
     }
 
+    public static List<EndangeredAnimal> all() {
+        String sql = "SELECT * FROM animals WHERE type='endangered';";
+        try (Connection con = DB.sql2o.open()) {
+            return con.createQuery(sql)
+                    .throwOnMappingFailure(false)
+                    .executeAndFetch(EndangeredAnimal.class);
+        }
 
+    }
 
     public static EndangeredAnimal find(int id) {
         try (Connection con = DB.sql2o.open()) {
@@ -42,6 +52,19 @@ public class EndangeredAnimal extends Animals {
             return animal;
         }
     }
+
+
+
+//    public static EndangeredAnimal find(int id) {
+//        try (Connection con = DB.sql2o.open()) {
+//            String sql = "SELECT * FROM animals where id=:id AND type = 'endangered'; ";
+//            EndangeredAnimal animal = con.createQuery(sql)
+//                    .addParameter("id", id)
+//                    .throwOnMappingFailure(false)
+//                    .executeAndFetchFirst(EndangeredAnimal.class);
+//            return animal;
+//        }
+//    }
 
 
 

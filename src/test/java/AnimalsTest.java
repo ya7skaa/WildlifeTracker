@@ -57,9 +57,9 @@ public class AnimalsTest {
     public void getSightings_retrievesALlSightingsFromDatabase_sightingsList() {
         Animals myAnimal = new Animals("Lion");
         myAnimal.save();
-        Sighting firstSighting = new Sighting("John","By the river", myAnimal.getId());
+        Sighting firstSighting = new Sighting("John","By the river", myAnimal.getId(),"Sick","Young");
         firstSighting.save();
-        Sighting secondSighting = new Sighting("Peter","By the pond", myAnimal.getId());
+        Sighting secondSighting = new Sighting("Peter","By the pond", myAnimal.getId(),"Sick","Young");
         secondSighting.save();
         Sighting[] sightings = new Sighting[] { firstSighting, secondSighting };
         assertTrue(myAnimal.getSightings().containsAll(Arrays.asList(sightings)));
