@@ -12,11 +12,11 @@ choose to group the animals as endangered and non endangered animals. Among the 
 to post sightings and details of the sighting such as the location of the sightng, who sighted the animal, the age and health of
 animal sighted
 
-![](images/image1.png)
+![](/images/image1.png)
 ### This is the homepage of the website, it lets you choose whether you want to add an animal, view the animals or post a sighting
-![](images/image2.png)
+![](/images/image2.png)
 ### Here the website allows you to add an animal to the website and choose whether it is endangered or not
-![](screenshots/Screenshot3.png)
+![](/images/image3.png)
 ### Here the website allows you to post sighting details of the animal
 
 
