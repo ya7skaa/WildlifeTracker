@@ -4,42 +4,40 @@
 
 
 .btn-warning {
-    background: none;
+
     border: 3px solid #5bc0de;
     color: #5bc0de;
 }
 .btn-warning:hover,
 .btn-warning:active {
     color: #FFF;
-    background: #39b3d7;
+
 }
 
 .btn-warning {
-    background: none;
+
     border: 3px solid #f0ad4e;
     color: #f0ad4e;
 }
 .btn-warning:hover,
 .btn-warning:active {
     color: #FFF;
-    background: #ed9c28;
+
 }
 
 .btn-warning {
-    background: none;
+
     border: 3px solid #d9534f;
     color: #d9534f;
 }
 .btn-warning:hover,
 .btn-warning:active {
     color: #FFF;
-    background: #d2322d;
+
 }
 
 
-.hm-gradient {
-    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-}
+
 .darken-grey-text {
     color: #2E2E2E;
 }
@@ -91,12 +89,7 @@
 .form-white textarea.md-textarea:focus:not([readonly])+label {
     color: #fff;
 }
-.ripe-malinka-gradient {
-    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
-}
-.near-moon-gradient {
-    background-image: linear-gradient(to bottom, #5ee7df 0%, #b490ca 100%);
-}
+
 
 
 
@@ -393,10 +386,10 @@ body.swal2-toast-shown.swal2-has-input>.swal2-container>.swal2-toast .swal2-vali
 }
 body.swal2-toast-shown>.swal2-container{
     position:fixed;
-    background-color:transparent
+
 }
 body.swal2-toast-shown>.swal2-container.swal2-shown{
-    background-color:transparent
+
 }
 body.swal2-toast-shown>.swal2-container.swal2-top{
     top:0;
@@ -767,7 +760,7 @@ body.swal2-no-backdrop .swal2-shown{
     right:auto;
     bottom:auto;
     left:auto;
-    background-color:transparent
+
 }
 body.swal2-no-backdrop .swal2-shown>.swal2-modal{
     box-shadow:0 0 10px rgba(0,0,0,.4)
@@ -829,7 +822,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     align-items:center;
     justify-content:center;
     padding:10px;
-    background-color:transparent;
+
     z-index:1060;
     overflow-x:hidden;
     -webkit-overflow-scrolling:touch
@@ -907,10 +900,10 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     }
 }
 .swal2-container.swal2-fade{
-    transition:background-color .1s
+
 }
 .swal2-container.swal2-shown{
-    background-color:rgba(0,0,0,.4)
+
 }
 .swal2-popup{
     display:none;
@@ -921,7 +914,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     max-width:100%;
     padding:1.25em;
     border-radius:.3125em;
-    background:#fff;
+
     font-family:inherit;
     font-size:1rem;
     box-sizing:border-box
@@ -959,10 +952,10 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     opacity:.4
 }
 .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:hover{
-    background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))
+
 }
 .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled:active{
-    background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))
+
 }
 .swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-confirm{
     width:2.5em;
@@ -972,7 +965,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     border:.25em solid transparent;
     border-radius:100%;
     border-color:transparent;
-    background-color:transparent!important;
+
     color:transparent;
     cursor:default;
     box-sizing:border-box;
@@ -1012,16 +1005,14 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
 .swal2-popup .swal2-styled.swal2-confirm{
     border:0;
     border-radius:.25em;
-    background:initial;
-    background-color:#3085d6;
+
     color:#fff;
     font-size:1.0625em
 }
 .swal2-popup .swal2-styled.swal2-cancel{
     border:0;
     border-radius:.25em;
-    background:initial;
-    background-color:#aaa;
+
     color:#fff;
     font-size:1.0625em
 }
@@ -1055,7 +1046,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     transition:color .1s ease-out;
     border:none;
     border-radius:0;
-    background:0 0;
+
     color:#ccc;
     font-family:serif;
     font-size:2.5em;
@@ -1169,7 +1160,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     align-items:center;
     justify-content:center;
     padding:.625em;
-    background:#f0f0f0;
+
     color:#666;
     font-size:1em;
     font-weight:300;
@@ -1182,7 +1173,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     height:1.5em;
     margin:0 .625em;
     border-radius:50%;
-    background-color:#f27474;
+
     color:#fff;
     font-weight:600;
     line-height:1.5em;
@@ -1245,7 +1236,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     width:2.9375em;
     height:.3125em;
     border-radius:.125em;
-    background-color:#f27474
+
 }
 .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{
     left:1.0625em;
@@ -1324,7 +1315,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     position:absolute;
     height:.3125em;
     border-radius:.125em;
-    background-color:#a5dc86;
+
     z-index:2
 }
 .swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{
@@ -1355,7 +1346,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     width:2em;
     height:2em;
     border-radius:2em;
-    background:#3085d6;
+
     color:#fff;
     line-height:2em;
     text-align:center;
@@ -1368,19 +1359,19 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
     margin-right:0
 }
 .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep{
-    background:#3085d6
+
 }
 .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep~.swal2-progresscircle{
-    background:#add8e6
+
 }
 .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep~.swal2-progressline{
-    background:#add8e6
+
 }
 .swal2-progresssteps .swal2-progressline{
     width:2.5em;
     height:.4em;
     margin:0 -1px;
-    background:#3085d6;
+
     z-index:10
 }
 [class^=swal2]{
@@ -1507,4 +1498,10 @@ box-shadow: 0 0 6px 3px rgba(0,0,0,.35); }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   color: #DDBE42;
+}
+
+.intro{
+color: deep-orange;
+font-family: 'Satisfy', cursive;
+
 }

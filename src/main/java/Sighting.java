@@ -1,5 +1,7 @@
+import java.text.DateFormat;
 import java.util.List;
 import org.sql2o.*;
+import java.sql.Timestamp;
 
 public class Sighting {
     private String ranger;
@@ -8,6 +10,7 @@ public class Sighting {
     private int animalId;
     private String health;
     private String age;
+    private Timestamp date;
 
     public Sighting(String ranger, String location,int animalId, String health, String age){
         this.ranger = ranger;
@@ -41,6 +44,10 @@ public class Sighting {
         return age;
     }
 
+    public String getDate() {
+        return DateFormat.getDateTimeInstance().format(date);
+    }
+
     public static List<Sighting> all() {
         String sql = "SELECT id, ranger, location, animalId, health , age  FROM sightings";
         try(Connection con = DB.sql2o.open()) {
@@ -65,7 +72,7 @@ public class Sighting {
 
     public void save() {
         try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO sightings (ranger, location, animalId, health, age) VALUES (:ranger, :location, :animalId, :health, :age)";
+            String sql = "INSERT INTO sightings (ranger, location, animalId, health, age,date) VALUES (:ranger, :location, :animalId, :health, :age, now())";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("ranger", this.ranger)
                     .addParameter("location", this.location)
