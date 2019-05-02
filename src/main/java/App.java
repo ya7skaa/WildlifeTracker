@@ -38,10 +38,11 @@ public class App {
 
         post("/endangered_sighting", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            String location = request.queryParams("location");
             String ranger = request.queryParams("ranger");
+            String location = request.queryParams("location");
+
             String health = request.queryParams("health");
-            String age = request.queryParams("health");
+            String age = request.queryParams("age");
 
             int animalId = Integer.parseInt(request.queryParams("endangeredAnimalSelected"));
             Sighting sighting = new Sighting(ranger, location, animalId,health,age);
@@ -59,10 +60,11 @@ public class App {
         // route for adding non-endangered animal sighting
         post("/sighting ", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            String location = request.queryParams("location");
             String ranger = request.queryParams("ranger");
+            String location = request.queryParams("location");
+
             String health = request.queryParams("health");
-            String age = request.queryParams("health");
+            String age = request.queryParams("age");
 
             int animalId = Integer.parseInt(request.queryParams("endangeredAnimalSelected"));
             Sighting sighting = new Sighting(ranger, location, animalId,health, age);
@@ -91,7 +93,7 @@ public class App {
             if (endangered) {
                 String name = request.queryParams("name");
                 String health = request.queryParams("health");
-                String age = request.queryParams("health");
+                String age = request.queryParams("age");
                 EndangeredAnimal animal = new EndangeredAnimal(name,health,age);
                 animal.save();
             } else {
@@ -132,6 +134,13 @@ public class App {
             Animals animal = Animals.find(Integer.parseInt(request.params("id")));
             model.put("animal", animal);
             model.put("template", "templates/animal.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
+
+        get("/error", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            model.put("template", "templates/error.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 

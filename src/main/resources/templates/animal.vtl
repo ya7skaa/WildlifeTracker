@@ -8,8 +8,8 @@
         #if($animal.getEndangered == true)
         #foreach($sighting in $animal.getSighting())
         <strong>Location:</strong> $sighting.getLocation()
-    </br><strong>Health:</strong> $animal.getHealth()
-</br><strong>Age:</strong> $animal.getAge()
+    </br><strong>Health:</strong> $sighting.getHealth()
+</br><strong>Age:</strong> $sighting.getAge()
         </br><strong>Reported by:</strong> $sighting.getRanger()
         </br><strong>ID:</strong> $sighting.getId()
         #end
