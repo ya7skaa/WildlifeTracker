@@ -72,7 +72,7 @@ public class Sighting {
 
     public void save() {
         try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO sightings (ranger, location, animalId, health, age,date) VALUES (:ranger, :location, :animalId, :health, :age, now())";
+            String sql = "INSERT INTO sightings (ranger, location, animalId, health, age, date) VALUES (:ranger, :location, :animalId, :health, :age, now())";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("ranger", this.ranger)
                     .addParameter("location", this.location)

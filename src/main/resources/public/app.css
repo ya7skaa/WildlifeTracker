@@ -1,16 +1,23 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
 
+.btnCenter{
+ width:50;
+ margin-left:25%;
+ margin-right:25%;
+}
 
 
 .btn-warning {
 
     border: 3px solid #5bc0de;
     color: #5bc0de;
+    align-item:center;
 }
 .btn-warning:hover,
 .btn-warning:active {
     color: #FFF;
+     align-item:center;
 
 }
 
@@ -18,10 +25,12 @@
 
     border: 3px solid #f0ad4e;
     color: #f0ad4e;
+     align-item:center;
 }
 .btn-warning:hover,
 .btn-warning:active {
     color: #FFF;
+     align-item:center;
 
 }
 
@@ -29,10 +38,12 @@
 
     border: 3px solid #d9534f;
     color: #d9534f;
+     align-item:center;
 }
 .btn-warning:hover,
 .btn-warning:active {
     color: #FFF;
+     align-item:center;
 
 }
 
@@ -1439,7 +1450,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
 }
 
 
-.navbar {background-color: #0B0B0B !important; border-color: transparent; border-radius: 0%;
+.navbar {background-color: btn-warning !important; border-color: transparent; border-radius: 0%;
 box-shadow: 0 0 6px 3px rgba(0,0,0,.35); }
 /** Default navbar **/
 .navbar-default .navbar-nav>li>a { padding-top: 25px; padding-bottom: 25px; min-height: 69px; color: #A4A4A4;}

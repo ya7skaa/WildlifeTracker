@@ -1,5 +1,6 @@
 <div>
     <center>
+
         <h1>$animal.getName()</h1>
         <h3>ID: $animal.getId()</h3>
         #if($animal.getSightings().size() == 0)
@@ -12,12 +13,17 @@
 </br><strong>Age:</strong> $sighting.getAge()
         </br><strong>Reported by:</strong> $sighting.getRanger()
         </br><strong>ID:</strong> $sighting.getId()
+        </br><strong>Date:</strong> $sighting.getDate()
+
+
         #end
         #else
         #foreach($sighting in $animal.getSighting())
+
 <strong>Location:</strong> $sighting.getLocation()
         </br><strong>Reported by:</strong> $sighting.getRanger()
         </br><strong>ID:</strong> $sighting.getId()
+        </br><strong>Date:</strong> $sighting.getDate()
         #end
         #end
         #end
