@@ -1,1 +1,1 @@
-web: ./build/install/WildlifeTracker/bin/WildlifeTracker
+web: ./build/install/app/bin/app
