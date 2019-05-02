@@ -33,7 +33,7 @@ dependencies {
 }
 
 // Define the main class for the application
-mainClassName = 'WildlifeTracker.App'
+mainClassName = 'App'
 archivesBaseName ='WildlifeTracker'
 applicationName='app'
 
